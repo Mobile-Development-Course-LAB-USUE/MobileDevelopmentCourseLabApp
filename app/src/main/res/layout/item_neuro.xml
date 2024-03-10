@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/account"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/additionalFields"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Bard"
+        />
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/additionalFields"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="10"/>
+
+    <LinearLayout
+        android:id="@+id/additionalFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/easy_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Простой текст"
+            />
+        <TextView
+            android:id="@+id/hard_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сложный контент"
+            />
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название компании"
+            />
+        <TextView
+            android:id="@+id/task_neuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Работа с аудио"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

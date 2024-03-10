@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon_48"
+        android:layout_height="@dimen/icon_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/account"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Илон Маск"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintEnd_toStartOf="@id/tShirt"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/tShirt"
+        android:layout_width="@dimen/icon_48"
+        android:layout_height="@dimen/icon_48"
+        android:src="@drawable/t_shirt"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="0dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@id/tShirt"
+        app:layout_constraintEnd_toEndOf="@id/tShirt"
+        app:layout_constraintStart_toStartOf="@id/tShirt"
+        app:layout_constraintTop_toTopOf="@id/tShirt"
+        android:gravity="center"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="icon, name, tShirt"
+        />
+
+    <TextView
+        android:id="@+id/infoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offset_medium"
+        app:layout_constraintTop_toBottomOf="@+id/headerBarrier"
+        android:text="@string/info_title"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBarrier"
+        app:barrierDirection="end"
+        app:barrierMargin="@dimen/offset_small"
+        app:constraint_referenced_ids="ageTitle,positionTitle,teamTitle"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pos_title"
+        android:id="@+id/ageTitle"
+        app:layout_constraintTop_toBottomOf="@id/infoTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/offset_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age_value"
+        app:layout_constraintTop_toBottomOf="@id/infoTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="1 место"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/positionTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/velocity_gen"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/positionValue"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="   5000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamTitle"
+        app:layout_constraintTop_toBottomOf="@id/positionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="@string/company_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamValue"
+        app:layout_constraintTop_toBottomOf="@id/positionTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="OpenAI"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

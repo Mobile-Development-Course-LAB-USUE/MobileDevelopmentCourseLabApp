@@ -15,8 +15,16 @@
         android:id="@+id/navigation_second"
         android:name="com.example.mobiledevelopmentcourselabapp.presentation.view.second.SecondFragment"
         android:label="@string/title_second"
-        tools:layout="@layout/fragment_second" />
-
+        tools:layout="@layout/fragment_list" />
+        <action
+            android:id="@+id/action_to_navigation_card"
+            app:destination="@id/navigation_card"
+            app:defaultNavHost="true"/>
+    <fragment
+        android:id="@+id/navigation_card"
+        android:name="com.example.mobiledevelopmentcourselabapp.presentation.view.second.CardFragment"
+        android:label="Карточка нейросети"
+        tools:layout="@layout/fragment_card" />
     <fragment
         android:id="@+id/navigation_third"
         android:name="com.example.mobiledevelopmentcourselabapp.presentation.view.third.ThirdFragment"
