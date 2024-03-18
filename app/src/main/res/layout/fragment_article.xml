@@ -1,80 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp">
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/offset_medium">
 
         <!--    https://www.championat.com/football/news-5414738-stal-izvesten-novyj-kandidat-na-zamenu-kloppu-v-liverpule.html-->
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/offset_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Стал известен новый кандидат на замену Клоппу в «Ливерпуле»"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/author"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/offset_small"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Иван Иванов"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/dateTime"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/offset_small"-->
+<!--            android:gravity="center"-->
+<!--            android:text="29 января 2024, 19:46 МСК"-->
+<!--            android:textSize="16sp" />-->
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="Стал известен новый кандидат на замену Клоппу в «Ливерпуле»"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="@dimen/offset_medium" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_medium"
+            android:text="@string/load" />
 
         <TextView
-            android:id="@+id/author"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Иван Иванов"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/dateTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="29 января 2024, 19:46 МСК"
-            android:textSize="16sp" />
-
-        <TextView
+            android:id="@+id/firstText"
             style="@style/TextView.Subtitle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Главный тренер лиссабонского «Спортинга» Рубен Аморим стал новым кандидатом на замену Юргену Клоппу в английском «Ливерпуле», сообщает Daily Mail.
-
-    По информации источника, Аморим является аутсайдером в шорт-листе «Ливерпуля» на пост главного тренера команды. Однако мерсисайдцы интересуются защитниками «Спортинга» Усманом Диоманде и Гонсало Инасиу, а 39-летний специалист может уговорить игроков перейти в английский клуб."
-            android:layout_marginTop="16dp"
-            />
-
-        <!--    android:textSize="16dp"-->
-        <!--    android:textColor="@color/black"-->
-
+            android:layout_marginTop="@dimen/offset_medium"
+            tools:text="Главный тренер лиссабонского «Спортинга» Рубен Аморим стал новым кандидатом на замену Юргену" />
 
         <ImageView
             android:id="@+id/mainPhoto"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/photo"
-            android:background="@color/teal_200" />
+            android:background="@color/teal_200"
+            android:src="@drawable/photo" />
 
-        <TextView
-            style="@style/TextView.Subtitle1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="
-Аморим возглавил «Спортинг» в марте 2020 года и впервые за 20 лет принёс титул чемпионов португальской лиги. Также Рубен выиграл два раза Кубок Португалии и один раз – Суперкубок Португалии. В нынешнем сезоне его команда сыграла 30 матчей, в которых одержала победу в 23 играх, три раза сыграла вничью и четыре встречи проиграла.
-
-Кроме того, основными кандидатами на замену Клоппу являются главный тренер «Байера» Хаби Алонсо и Роберто Де Дзерби, который работает в «Брайтоне»."
-            android:layout_marginTop="16dp"
-            android:textSize="16dp"
-            android:textColor="@color/black" />
+<!--        <TextView-->
+<!--            android:id="@+id/secondText"-->
+<!--            style="@style/TextView.Subtitle1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/offset_medium"-->
+<!--            android:textColor="@color/black"-->
+<!--            tools:text="Аморим возглавил «Спортинг» в марте 2020 года и впервые за 20 лет принёс титул чемпионов." />-->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -86,22 +91,21 @@
                 android:id="@+id/thumbUp"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/thumb_up"
-                android:padding="16dp" />
+                android:padding="16dp"
+                android:src="@drawable/thumb_up" />
 
             <ImageButton
                 android:id="@+id/thumbDown"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/thumb_down"
-                android:padding="16dp" />
+                android:padding="16dp"
+                android:src="@drawable/thumb_down" />
 
             <TextView
                 android:id="@+id/likeResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
+                tools:text="0" />
 
         </LinearLayout>
 

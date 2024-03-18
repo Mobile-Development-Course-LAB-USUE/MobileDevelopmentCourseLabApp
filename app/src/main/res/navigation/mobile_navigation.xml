@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_list">
+    app:startDestination="@+id/navigation_article">
 
     <fragment
         android:id="@+id/navigation_article"
-        android:name="com.example.mobiledevelopmentcourselabapp.presentation.view.article.ArticleFragment"
+        android:name="com.example.mobiledevelopmentcourselabapp.presentation.view.article.view.ArticleFragment"
         android:label="@string/title_article"
         tools:layout="@layout/fragment_article" />
 

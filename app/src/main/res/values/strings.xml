@@ -14,6 +14,9 @@
     <string name="share">Поделиться</string>
     <string name="comments">Комментарии</string>
     <string name="comments_hint">Введите комментарий</string>
+    <string name="again">Еще раз</string>
+    <string name="load">Загрузить</string>
+    <string name="loading">Загрузка</string>
 
     <plurals name="age">
         <item quantity="one">год</item>
